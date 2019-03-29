@@ -1,14 +1,13 @@
-Feature: Title of your feature
-  I want to use this template for my feature file
+Feature: Basic Requests
 
-  Scenario Outline: Title of your scenario outline
-    Given The user enters base uri "<URI>"
-    When the user enters values "<ID>""<FN>","<LN>","<EID>","<CL>"
-    Then the user sees success message
+  Scenario Outline: Get Request
+    Given The user is using the base URI
+    When The user makes a GET call using the "<I_D>"
+    Then The user checks for the status code "200"
 
     Examples: 
-      | URI                   | ID      | FN         | LN | EID               | CL |
-      | http://localhost:3000 | users/1 | Harish     | T  | harisht@gmail.com | 91 |
-      | http://localhost:3000 | users/2 | bhuva      | p  | bhuva@gmail.com   | 88 |
-      | http://localhost:3000 | users/3 | thalllaaaa | a  | thala@gmail.com   | 93 |
-      | http://localhost:3000 | users/4 | kalai      | k  | kalai@gmail.com   | 88 |
+      | I_D |
+      |   1 |
+      |   2 |
+      |   3 |
+      |  20 |

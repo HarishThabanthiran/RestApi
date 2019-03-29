@@ -13,11 +13,11 @@ public class putRequest {
 		HashMap<String, String> headers = new HashMap<String, String>();
 		headers.put("Content-Type", "application/json");
 		user u3 = new user();
-		u3.setId(4);
-		u3.setFirst_name("avatarYang");
-		u3.setLast_name("H");
-		u3.setEmail("homura@gmail.com");
-		Response response = request.baseUri("http://localhost:3000/users/4").headers(headers).body(u3).put();
+		u3.setId(3);
+		u3.setFirst_name("Ginji");
+		u3.setLast_name("Amano");
+		u3.setEmail("lightningemperor@gmail.com");
+		Response response = request.baseUri("http://localhost:3000/").headers(headers).body(u3).put("users/3");
 		System.out.println(response.getStatusCode());
 	}
 
