@@ -7,10 +7,11 @@ public class getRequest {
 	
 	public static void main(String[] args) {
 		
-		RestAssured.baseURI= "http://localhost:3000/";
-		given().
-		when().get("http://localhost:3000/users/1").
+		RestAssured.baseURI= "http://localhost:3000/users";
+		given().contentType("application/json").
+		when().get("1").
 		then().statusCode(200);
+		
 	}
 
 }
